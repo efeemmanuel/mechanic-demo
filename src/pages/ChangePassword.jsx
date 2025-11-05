@@ -101,7 +101,7 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import ProfileNav from "../components/ProfileNav";
 import { userAPI } from "../services/profileAPI";
-import "../styles/changePassword.css";
+import "../styles/ChangePassword.css";
 
 const ChangePassword = () => {
   const [currentPassword, setCurrentPassword] = useState("");
