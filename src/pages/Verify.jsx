@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { authAPI } from "../services/api";
-import "../styles/verify.css";
+import "../styles/Verify.css";
 
 const Verify = () => {
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
