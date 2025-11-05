@@ -1,0 +1,173 @@
+/* ===========================
+   COMPLETE PROFILE PAGE
+=========================== */
+
+.complete-profile-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* ===========================
+   CARD
+=========================== */
+.complete-profile-content {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 780px;
+  padding: 36px;
+  color: #1f2937;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.complete-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.complete-profile-back-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #6b7280;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  font-size: 18px;
+}
+
+.complete-profile-back-button:hover {
+  background-color: #f3f4f6;
+}
+
+.complete-profile-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.complete-profile-subtitle {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* ===========================
+   FORM
+=========================== */
+.complete-profile-form-container {
+  margin-bottom: 40px;
+}
+
+.complete-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.complete-profile-input-field {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #1f2937;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.complete-profile-input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.complete-profile-input-field::placeholder {
+  color: #9ca3af;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+.complete-profile-next-button {
+  width: 100%;
+  background-color: #061957;
+  color: #fff;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.complete-profile-next-button:hover {
+  background-color: #041850;
+}
+
+.complete-profile-next-button:active {
+  background-color: #051646;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 768px) {
+  .complete-profile-content {
+    padding: 28px;
+    width: 95%;
+  }
+
+  .complete-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .complete-profile-title {
+    font-size: 24px;
+  }
+
+  .complete-profile-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .complete-profile-content {
+    padding: 22px;
+  }
+
+  .complete-profile-title {
+    font-size: 22px;
+  }
+
+  .complete-profile-next-button {
+    padding: 18px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .complete-profile-content {
+    padding: 18px;
+  }
+
+  .complete-profile-title {
+    font-size: 20px;
+  }
+}

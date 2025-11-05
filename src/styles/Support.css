@@ -1,0 +1,402 @@
+/* Support Page Styles */
+
+.support-app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.support-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-left: 260px;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+/* Header */
+.support-header {
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.support-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.support-header-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.support-header-title-wrapper i {
+  font-size: 20px;
+  color: #4b5563;
+}
+
+.support-header-title-wrapper h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Navigation Tabs */
+.support-tab-navigation {
+  display: flex;
+  gap: 16px;
+  padding: 0 0 0 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.support-tab-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.support-tab-btn {
+  padding: 12px 4px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.support-tab-btn:hover {
+  color: #374151;
+}
+
+.support-tab-btn.support-tab-btn-active {
+  color: #2563eb;
+  font-weight: 500;
+  border-bottom-color: #2563eb;
+}
+
+/* Support Content */
+.support-content {
+  flex: 1;
+  padding: 16px 0;
+  overflow-y: auto;
+}
+
+.support-content-wrapper {
+   width: 100%;
+  max-width: none;
+}
+
+.support-page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+/* Create New Ticket Card */
+.support-ticket-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.support-ticket-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.support-ticket-subtitle {
+  color: #4b5563;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.support-textarea-wrapper {
+  margin-bottom: 16px;
+}
+
+.support-textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  resize: none;
+  height: 128px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.support-textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.support-submit-btn {
+  background-color: #08307C;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.support-submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Bottom Section */
+.support-bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.support-history-section {
+  flex: 1;
+}
+
+.support-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+
+
+
+.support-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.support-history-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+  gap: 12px;
+}
+
+/* Message Section */
+.support-history-message {
+  flex: 2;
+  min-width: 180px;
+}
+
+/* Date Section */
+.support-history-date-wrapper {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Status Section */
+.support-history-status-wrapper {
+  flex: 1;
+  min-width: 140px;
+  text-align: right;
+}
+
+/* Shared Styles */
+.support-history-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.support-history-email,
+.support-history-date,
+.support-history-status {
+  font-size: 14px;
+  color: #4b5563;
+  word-break: break-all;
+}
+
+/* Status colors */
+.support-status-resolved {
+  color: #1717e9;
+}
+
+.support-status-unresolved {
+  color: #a21ea2;
+}
+
+/* ✅ Responsive layout: stacks neatly on smaller screens */
+@media (max-width: 600px) {
+  .support-history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .support-history-date-wrapper,
+  .support-history-status-wrapper {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+
+/* 📱 Small devices (phones, <600px) */
+@media (max-width: 600px) {
+  .support-history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .support-history-message,
+  .support-history-date-wrapper,
+  .support-history-status-wrapper {
+    width: 100%;
+    min-width: 100%;
+    text-align: left;
+  }
+
+  .support-history-label {
+    font-size: 13px;
+  }
+
+  .support-history-email,
+  .support-history-date,
+  .support-history-status {
+    font-size: 13px;
+  }
+}
+
+/* 📱📲 Medium devices (tablets, <900px) */
+@media (max-width: 900px) {
+  .support-history-item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .support-history-message {
+    flex: 100%;
+  }
+
+  .support-history-date-wrapper,
+  .support-history-status-wrapper {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Social Media Section */
+.support-social-section {
+  width: 100%;
+}
+
+.support-social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.support-social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.support-social-icon-small {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) {
+  .support-bottom-section {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .support-history-section {
+    flex: 1;
+  }
+
+  .support-social-section {
+    width: 192px;
+  }
+
+  .support-history-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .support-history-message {
+    margin-bottom: 0;
+  }
+
+  .support-history-details {
+    display: block;
+    text-align: right;
+    margin-left: 16px;
+  }
+
+  .support-history-status-wrapper {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .support-main-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-content {
+    padding: 12px 0;
+  }
+
+  .support-ticket-card {
+    padding: 16px;
+  }
+
+  .support-page-title {
+    font-size: 18px;
+  }
+
+  .support-tab-navigation {
+    gap: 8px;
+  }
+}

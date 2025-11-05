@@ -1,0 +1,142 @@
+/* ---------- Overlay ---------- */
+.deletemodal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* ---------- Container ---------- */
+.deletemodal-container {
+  background: #fff;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 400px;
+  padding: 28px 24px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+/* ---------- Close Button ---------- */
+.deletemodal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #777;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.deletemodal-close:hover {
+  color: #000;
+}
+
+/* ---------- Icon ---------- */
+.deletemodal-icon {
+  background: #fff4f4;
+  border: 2px solid #ffcccc;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.deletemodal-icon i {
+  font-size: 2rem;
+  color: #d93025;
+}
+
+/* ---------- Text ---------- */
+.deletemodal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a1a4f;
+  margin-bottom: 8px;
+}
+
+.deletemodal-message {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* ---------- Buttons ---------- */
+.deletemodal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.deletemodal-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+}
+
+.deletemodal-btn.cancel {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.deletemodal-btn.cancel:hover {
+  background: #ccc;
+}
+
+.deletemodal-btn.confirm {
+  background: #d93025;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.deletemodal-btn.confirm:hover {
+  background: #b0251d;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .deletemodal-container {
+    padding: 22px 18px;
+  }
+
+  .deletemodal-actions {
+    flex-direction: column;
+  }
+
+  .deletemodal-btn {
+    width: 100%;
+  }
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,384 @@
+/* ================================
+   ORDER DETAILS PAGE (Namespaced)
+   ================================ */
+
+.orderdetails-container {
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: "Inter", sans-serif;
+  color: #222;
+  box-sizing: border-box;
+}
+
+/* ---------- Header ---------- */
+.orderdetails-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+
+.orderdetails-back-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.orderdetails-back-btn:hover {
+  color: #0056b3;
+}
+
+.orderdetails-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ---------- Profile Section ---------- */
+/* ---------- Profile Section ---------- */
+.orderdetails-profile {
+  background: linear-gradient(135deg, #0a1a4f, #1345a8);
+  color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  gap: 20px;
+}
+
+.orderdetails-profile:hover {
+  transform: translateY(-2px);
+}
+
+/* Left Section (Image + Name) */
+.orderdetails-profile-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 240px;
+}
+
+.orderdetails-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.orderdetails-img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.orderdetails-profile-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.orderdetails-name-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderdetails-client-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.orderdetails-client-subtext {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Right Info Section */
+.orderdetails-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px 24px;
+  flex: 2;
+  min-width: 280px;
+}
+
+.orderdetails-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.orderdetails-info strong {
+  color: #fff;
+  margin-right: 4px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .orderdetails-profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .orderdetails-profile-left {
+    flex-direction: column;
+  }
+
+  .orderdetails-profile-img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .orderdetails-name-block {
+    margin-top: 8px;
+  }
+
+  .orderdetails-info {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .orderdetails-info {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .orderdetails-client-name {
+    font-size: 1.2rem;
+  }
+
+  .orderdetails-client-subtext {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+/* ---------- Location ---------- */
+.orderdetails-location {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.orderdetails-direction-btn {
+  color: #0a1a4f;
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.orderdetails-direction-btn:hover {
+  color: #08347a;
+}
+
+/* ---------- Sleek Order Request ---------- */
+.sleek-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: all 0.25s ease;
+  border: 1px solid #eaeaea;
+}
+
+.sleek-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sleek-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #0a1a4f;
+  margin-bottom: 12px;
+}
+
+.sleek-card-header .icon {
+  font-size: 20px;
+}
+
+.sleek-card-description {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Parts list */
+.parts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.part-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #f9fafc;
+  border: 1px solid #e5e8ef;
+  transition: background 0.2s ease;
+}
+
+.part-item:hover {
+  background: #eef3ff;
+}
+
+.part-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.part-qty {
+  font-size: 14px;
+  color: #666;
+}
+
+.part-qty span {
+  font-weight: 600;
+  color: #0a1a4f;
+}
+
+/* ---------- Complaint Section ---------- */
+.orderdetails-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.orderdetails-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.orderdetails-card p {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* ---------- Actions ---------- */
+.orderdetails-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.orderdetails-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.orderdetails-btn-reject {
+  border: 1px solid #d93025;
+  color: #d93025;
+  background: transparent;
+}
+
+.orderdetails-btn-reject:hover {
+  background: #fbeaea;
+}
+
+.orderdetails-btn-accept {
+  background: #0a1a4f;
+  color: #fff;
+}
+
+.orderdetails-btn-accept:hover {
+  background: #072f8f;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .orderdetails-title {
+    font-size: 22px;
+  }
+
+  .orderdetails-profile-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orderdetails-container {
+    padding: 16px;
+  }
+
+  .orderdetails-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .orderdetails-profile-img {
+    margin: 0 auto 12px;
+  }
+
+  .orderdetails-location {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .orderdetails-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .orderdetails-btn {
+    width: 100%;
+  }
+
+  .sleek-card {
+    padding: 18px;
+  }
+
+  .part-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

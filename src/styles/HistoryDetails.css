@@ -1,0 +1,184 @@
+/* ==============================
+   HISTORY ORDER MODAL STYLES
+   ============================== */
+
+/* Overall page */
+.history-order-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay */
+.history-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Card */
+.history-modal-card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 640px;
+  padding: 24px;
+  z-index: 10;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Header */
+.history-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Order Info */
+.history-order-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-order-id {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.history-order-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.history-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.history-meta-label {
+  color: #999;
+  font-size: 0.7rem;
+}
+
+.history-meta-value {
+  font-weight: 500;
+  color: #333;
+}
+
+.history-meta-status {
+  color: #6c63ff;
+  font-weight: 600;
+}
+
+/* Close Button */
+.history-close-btn {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.history-close-btn:hover {
+  background: #f8f8f8;
+}
+
+.history-close-btn i {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Divider */
+.history-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+}
+
+/* Image Section */
+.history-image-section {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.history-image-section img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Content */
+.history-modal-body {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.history-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-info-label {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.25rem;
+}
+
+.history-info-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .history-modal-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .history-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .history-order-meta {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .history-image-section img {
+    height: auto;
+  }
+}

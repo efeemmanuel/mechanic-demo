@@ -1,0 +1,370 @@
+/* Procure Page Styles */
+
+.procure-page-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 8px;
+}
+
+.procure-page-wrapper {
+  width: 100%;
+  max-width: 896px;
+  background-color: #f3f4f6;
+  border-radius: 0;
+  padding: 12px;
+}
+
+/* Header */
+.procure-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.procure-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.procure-back-btn {
+  background: none;
+  border: none;
+  color: #4b5563;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.procure-back-btn:hover {
+  color: #1e3a8a;
+}
+
+.procure-back-btn i {
+  font-size: 20px;
+}
+
+.procure-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* Progress Bar */
+.procure-progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 32px;
+}
+
+.procure-progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.333%;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.procure-progress-step-active {
+  border-bottom: 4px solid #1e3a8a;
+  color: #1e3a8a;
+}
+
+.procure-progress-circle {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.procure-progress-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Card */
+.procure-card {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.procure-card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.procure-required {
+  color: #ef4444;
+}
+
+/* Vehicle Type Selection */
+.procure-vehicle-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.procure-vehicle-btn {
+  padding: 8px 16px;
+  border-radius: 0;
+  border: 1px solid #9ca3af;
+  background-color: white;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.procure-vehicle-btn:hover {
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+  color: #2563eb;
+}
+
+.procure-vehicle-btn-active {
+  border-color: #1e3a8a;
+  background-color: #eff6ff;
+  color: #1e3a8a;
+}
+
+/* Manual Order Input */
+.procure-order-input-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.procure-order-input {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 16px;
+  outline: none;
+  font-size: 14px;
+}
+
+.procure-order-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.procure-add-btn {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.procure-add-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Tags */
+.procure-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.procure-tag {
+  padding: 6px 12px;
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  font-size: 14px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.procure-tag:hover {
+  background-color: #bfdbfe;
+}
+
+.procure-tag-icon {
+  font-size: 12px;
+}
+
+/* File Upload */
+.procure-upload-wrapper {
+  position: relative;
+}
+
+.procure-file-input {
+  display: none;
+}
+
+.procure-upload-label {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.procure-upload-label:hover {
+  background-color: #f9fafb;
+}
+
+.procure-upload-icon {
+  font-size: 48px;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.procure-upload-text {
+  font-size: 14px;
+  color: #374151;
+  margin: 0 0 4px 0;
+}
+
+.procure-upload-subtext {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Files List */
+.procure-files-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.procure-file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+}
+
+.procure-file-icon {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.procure-file-name {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Error Message */
+.procure-error-message {
+  color: #dc2626;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* Next Button */
+.procure-next-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.procure-next-btn {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 8px 80px;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.procure-next-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  .procure-page-wrapper {
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  .procure-page-container {
+    padding: 24px 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .procure-vehicle-btn {
+    padding: 8px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .procure-page-wrapper {
+    padding: 32px;
+  }
+
+  .procure-vehicle-btn {
+    padding: 8px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .procure-title {
+    font-size: 20px;
+  }
+
+  .procure-progress-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .procure-progress-label {
+    font-size: 12px;
+  }
+
+  .procure-card {
+    padding: 16px;
+  }
+
+  .procure-vehicle-grid {
+    gap: 6px;
+  }
+
+  .procure-vehicle-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

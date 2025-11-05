@@ -1,0 +1,372 @@
+/* ---------- Overlay ---------- */
+.previewmodal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- Modal Container ---------- */
+.previewmodal-container {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 720px;
+  padding: 32px 28px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.25s ease-in-out;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* ---------- Close Button ---------- */
+.previewmodal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: #f3f3f3;
+  border: none;
+  font-size: 1rem;
+  color: #444;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.previewmodal-close-btn:hover {
+  background: #ececec;
+  transform: rotate(90deg);
+}
+
+/* ---------- Title & Subtitle ---------- */
+.previewmodal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0a1a4f;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.previewmodal-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* ---------- Table ---------- */
+.previewmodal-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #f9fafc;
+  padding: 10px;
+}
+
+.previewmodal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.previewmodal-table th,
+.previewmodal-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.previewmodal-table th {
+  background-color: #f1f4f9;
+  font-weight: 600;
+  color: #0a1a4f;
+}
+
+.previewmodal-input {
+  width: 100%;
+  max-width: 100px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.previewmodal-input:focus {
+  border-color: #0a1a4f;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10, 26, 79, 0.15);
+}
+
+.previewmodal-table td:last-child {
+  font-weight: 600;
+  color: #0a1a4f;
+}
+
+/* ---------- Grand Total ---------- */
+.previewmodal-grandtotal {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: right;
+  color: #0a1a4f;
+}
+
+.previewmodal-grandtotal span {
+  color: #113b8f;
+  background: #f1f4f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* ---------- Buttons ---------- */
+.previewmodal-actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.previewmodal-btn {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.previewmodal-btn.cancel {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.previewmodal-btn.cancel:hover {
+  background: #e0e0e0;
+}
+
+.previewmodal-btn.confirm {
+  background: linear-gradient(135deg, #0a1a4f, #113b8f);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(10, 26, 79, 0.2);
+}
+
+.previewmodal-btn.confirm:hover {
+  background: linear-gradient(135deg, #113b8f, #0a1a4f);
+  transform: translateY(-1px);
+}
+
+.previewmodal-btn.confirm.disabled {
+  background: #ccc;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .previewmodal-container {
+    padding: 22px;
+  }
+
+  .previewmodal-title {
+    font-size: 1.25rem;
+  }
+
+  .previewmodal-btn {
+    width: 100%;
+  }
+
+  .previewmodal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .previewmodal-table th,
+  .previewmodal-table td {
+    padding: 10px 8px;
+  }
+}
+
+/* ---------- Animation ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Update PreviewModal.css 
+.previewmodal-table th:nth-child(2),
+.previewmodal-table td:nth-child(2) {
+  display: none;
+}
+
+.previewmodal-table th,
+.previewmodal-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.previewmodal-input {
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.vehicle-info-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #007bff;
+}
+
+.vehicle-info-card h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.quote-details {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.hours-input, .notes-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.notes-textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.total-line {
+  font-size: 1.2em;
+  font-weight: bold;
+  border-top: 2px solid #007bff;
+  padding-top: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.help-text {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+}
+ *\
+
+
+
+ /* Add these styles to PreviewModal.css */
+
+.price-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 10px;
+  color: #666;
+  font-weight: bold;
+}
+
+.previewmodal-input {
+  padding-left: 25px !important;
+}
+
+.previewmodal-input.error {
+  border-color: #e11d48 !important;
+  background-color: #fef2f2;
+}
+
+.price-error {
+  color: #e11d48;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.service-total {
+  font-weight: bold;
+  color: #059669;
+}
+
+.total-amount {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #059669;
+}
+
+.estimated-time {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.previewmodal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.previewmodal-btn.confirm.disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.help-text {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  font-size: 0.9em;
+}

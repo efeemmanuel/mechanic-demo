@@ -1,0 +1,369 @@
+/* Root Container */
+.dashboard-content {
+  padding-top: 1.5rem;
+}
+
+/* ================= GRID ================= */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.left-column,
+.right-column {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.left-column:hover,
+.right-column:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+}
+
+/* Greeting */
+.greeting {
+  font-size: 26px;
+  font-weight: 600;
+  color: #08307c;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* ================= ACTION CARDS ================= */
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.action-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 14px;
+  padding: 1.6rem 1.2rem;
+  font-size: 17px;
+  font-weight: 550;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.card-blue {
+  background: linear-gradient(135deg, #4f46e5, #2c277f);
+}
+
+.card-orange {
+  background: linear-gradient(135deg, #ffa006, #996004);
+}
+
+.card-icon {
+  font-size: 20px;
+}
+
+/* ================= PENDING BOX ================= */
+.pending-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.pending-title {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #1b1b1b, #3b3b3b);
+}
+
+.pending-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.pending-main {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.pending-sub {
+  font-size: 14px;
+  color: #666;
+}
+
+.view-btn {
+  padding: 0.3rem 0.8rem;
+  font-size: 14px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-decoration: none;
+  color: #222;
+}
+
+.view-btn:hover {
+  background: #f2f2f2;
+}
+
+/* ================= CHATS ================= */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 14px;
+  border: 1px solid #e0e0e0;
+  transition: background 0.2s ease;
+}
+
+.chat-item:hover {
+  background: #fafafa;
+}
+
+.chat-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.chat-texts {
+  flex: 1;
+}
+
+.chat-main {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.chat-sub {
+  font-size: 14px;
+  color: #666;
+}
+
+.resume-btn {
+  border: 1px solid #333;
+  background: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #222;
+}
+
+.resume-btn:hover {
+  background: #f5f5f5;
+}
+
+/* ================= QUICK BUTTONS ================= */
+.quick-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.quick-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  color: #222;
+  transition: background 0.2s ease;
+}
+
+.quick-btn:hover {
+  background: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= HISTORY SECTION ================= */
+.history-section {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 1.5rem;
+  overflow-x: auto; /* Enables scroll if table is wider than container */
+}
+
+/* Make sure the scroll wrapper enforces horizontal scroll */
+.history-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+/* Table layout stays horizontal */
+.history-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 700px; /* Ensure it’s always wide enough to scroll instead of stacking */
+}
+
+/* Header and row remain aligned horizontally */
+.history-header,
+.history-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  font-size: 14px;
+  white-space: nowrap; /* Prevent stacking of text */
+}
+
+.history-header {
+  font-weight: 600;
+  color: #777;
+  border-bottom: 1px solid #e5e5e5;
+  text-transform: uppercase;
+}
+
+.history-row {
+  border-bottom: 1px solid #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.history-row:hover {
+  background: #fafafa;
+}
+
+/* Status styles */
+.status {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+  text-align: center;
+}
+
+.status.ongoing {
+  background: rgba(128, 0, 128, 0.1);
+  color: #800080;
+}
+
+.status.completed {
+  background: rgba(0, 150, 0, 0.1);
+  color: #009600;
+}
+
+.status.cancelled {
+  background: rgba(255, 0, 0, 0.1);
+  color: #d32f2f;
+}
+
+/* ================= RESPONSIVE FIX ================= */
+@media (max-width: 768px) {
+  .history-section {
+    padding: 1rem;
+  }
+
+  .history-table {
+    min-width: 650px; /* Wider min width to prevent wrapping */
+  }
+
+  .history-header span,
+  .history-row span {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .greeting {
+    font-size: 22px;
+  }
+}
+
+/* Keep table header horizontal and scrollable */
+@media (max-width: 768px) {
+  .history-table {
+    min-width: 550px;
+  }
+
+  .history-header span,
+  .history-row span {
+    font-size: 13px;
+  }
+
+  .history-section {
+    padding: 1rem;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}

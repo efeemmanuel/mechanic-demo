@@ -1,0 +1,417 @@
+:root {
+  --primary: #0d47a1;
+  --primary-hover: #09357a;
+  --text-main: #222;
+  --text-sub: #555;
+  --bg-light: #f4f6f9;
+  --border-light: #e5e7eb;
+  --radius: 12px;
+  --transition: 0.25s ease;
+}
+
+/* ===========================
+   LAYOUT STRUCTURE
+   =========================== */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: var(--bg-light);
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 2rem;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   NEW ORDER SECTION
+   =========================== */
+.neworder-section {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- HEADER ---------- */
+.neworder-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.neworder-back-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  background: rgba(13, 71, 161, 0.08);
+  transition: var(--transition);
+}
+
+.neworder-back-link:hover {
+  background: rgba(13, 71, 161, 0.2);
+}
+
+.neworder-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* ---------- SEARCH ---------- */
+.neworder-search-wrapper {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.neworder-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background: #f9fafb;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  transition: border var(--transition), box-shadow var(--transition);
+}
+
+.neworder-search-container:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  color: #777;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.neworder-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  padding: 0.5rem 0.75rem 0.5rem 2.2rem; /* space for icon */
+}
+
+.neworder-search-input::placeholder {
+  color: #999;
+}
+
+/* ---------- ORDER LIST ---------- */
+.neworder-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* ---------- ORDER CARD ---------- */
+.neworder-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+
+.neworder-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.neworder-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 220px;
+}
+
+.neworder-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.neworder-id {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: rgba(13, 71, 161, 0.1);
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.neworder-client {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.neworder-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+}
+
+/* ---------- VIEW BUTTON ---------- */
+.neworder-view-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background var(--transition);
+  margin-top: 0.5rem;
+  white-space: nowrap;
+}
+
+.neworder-view-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* ---------- EMPTY STATE ---------- */
+.no-results {
+  text-align: center;
+  color: #777;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 992px) {
+  .dashboard-main {
+    padding: 1.25rem;
+  }
+
+  .neworder-section {
+    padding: 1.25rem;
+  }
+
+  .neworder-title {
+    font-size: 1.5rem;
+  }
+
+  .neworder-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .neworder-view-btn {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .neworder-section {
+    padding: 1rem;
+  }
+
+  .neworder-card {
+    padding: 0.9rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .neworder-view-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .neworder-title {
+    font-size: 1.25rem;
+  }
+
+  .neworder-details {
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .neworder-search-container {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .neworder-search-input {
+    font-size: 0.85rem;
+  }
+
+  .neworder-card {
+    padding: 0.75rem;
+  }
+
+  .neworder-view-btn {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For mechanic's NewOrders.css */
+.orders-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.3s;
+}
+
+.tab-button.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.tab-button:hover {
+  color: #374151;
+}
+
+/* Status badges */
+.status-badge.quoted {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+
+/* For car owner's PendingOrders.css */
+.status-badge.quoted {
+  background-color: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #0ea5e9;
+}
+
+.quote-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.quote-amount {
+  font-weight: bold;
+  color: #059669;
+  font-size: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

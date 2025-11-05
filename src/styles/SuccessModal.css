@@ -1,0 +1,155 @@
+/* ---------- Overlay ---------- */
+.successmodal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* ---------- Modal Container ---------- */
+.successmodal-container {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px 28px;
+  position: relative;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: slideUp 0.3s ease-in-out;
+}
+
+/* ---------- Close Button ---------- */
+.successmodal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.successmodal-close:hover {
+  color: #000;
+  transform: rotate(90deg);
+}
+
+/* ---------- Illustration ---------- */
+.successmodal-illustration {
+  width: 110px;
+  height: 110px;
+  background: #f0f4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.successmodal-illustration img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ---------- Title ---------- */
+.successmodal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a1a4f;
+  margin-bottom: 16px;
+}
+
+/* ---------- Info Section ---------- */
+.successmodal-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #eef3ff;
+  color: #0a1a4f;
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.successmodal-info i {
+  font-size: 1.1rem;
+  margin-top: 3px;
+  color: #113b8f;
+}
+
+.successmodal-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #0a1a4f;
+}
+
+/* ---------- Button ---------- */
+.successmodal-btn {
+  background: linear-gradient(135deg, #0a1a4f, #113b8f);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(10, 26, 79, 0.25);
+}
+
+.successmodal-btn i {
+  margin-right: 8px;
+}
+
+.successmodal-btn:hover {
+  background: linear-gradient(135deg, #113b8f, #0a1a4f);
+  transform: translateY(-1px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .successmodal-container {
+    padding: 24px 20px;
+  }
+
+  .successmodal-title {
+    font-size: 1.05rem;
+  }
+
+  .successmodal-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

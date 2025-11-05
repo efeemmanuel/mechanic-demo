@@ -1,0 +1,183 @@
+/* Overlay */
+.done-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+/* Modal */
+.done-modal {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 420px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Close Button */
+.done-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.done-close-btn:hover {
+  color: #000;
+}
+
+/* Progress Bar */
+.done-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.done-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
+
+.done-step-circle {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  font-weight: 600;
+  background: white;
+}
+
+.done-step-circle.active {
+  border-color: #002060;
+  background: #e7ebff;
+  color: #002060;
+}
+
+.done-step-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+}
+
+.done-step-label.active {
+  color: #002060;
+}
+
+/* Content */
+.done-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.done-check {
+  width: 90px;
+  height: 90px;
+  background: #e7ebff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.done-check span {
+  font-size: 48px;
+  color: #002060;
+  font-weight: bold;
+}
+
+.done-text-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  text-align: center;
+}
+
+/* Info Box */
+.done-info-box {
+  background: #e7ebff;
+  color: #002060;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+}
+
+.done-info-box i {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+/* Buttons */
+.done-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  background: #002060;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #001540;
+}
+
+.btn-outline {
+  border: 1px solid #002060;
+  color: #002060;
+  background: white;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background: #e7ebff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

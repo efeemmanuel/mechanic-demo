@@ -1,0 +1,157 @@
+/* === VERIFY PAGE === */
+.verify-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 40px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.verify-card {
+  background: #ffffff;
+  padding: 60px 80px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.verify-card:hover {
+  transform: translateY(-3px);
+}
+
+.verify-logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.verify-title-group h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #08307c;
+}
+
+.verify-title-group p {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* === FORM === */
+.verify-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.verify-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.otp-input {
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  transition: all 0.3s ease;
+  outline: none;
+  background: #f9fafb;
+}
+
+.otp-input:focus {
+  border-color: #08307c;
+  box-shadow: 0 0 0 3px rgba(8, 48, 124, 0.2);
+}
+
+.verify-timer {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #08307c;
+}
+
+.resend-link {
+  font-weight: 600;
+  color: #08307c;
+  text-decoration: none;
+}
+
+.resend-link:hover {
+  text-decoration: underline;
+}
+
+/* === BUTTON === */
+.verify-btn {
+  width: 100%;
+  background: #08307c;
+  color: #fff;
+  padding: 14px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.verify-btn:hover {
+  background: #0b2f6d;
+  transform: translateY(-2px);
+}
+
+/* === RESPONSIVE STYLES === */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .verify-card {
+    padding: 50px 60px;
+  }
+  .otp-input {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .verify-card {
+    padding: 40px 25px;
+    max-width: 90%;
+  }
+
+  .verify-title-group h2 {
+    font-size: 1.5rem;
+  }
+
+  .otp-input {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+
+  .verify-btn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
