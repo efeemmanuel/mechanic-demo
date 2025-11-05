@@ -339,42 +339,42 @@ const NewOrders = () => {
       console.error('Error fetching orders:', error);
       setError('Failed to load orders');
       // Fallback to mock data for development
-      setOrders(getMockOrders());
+    
     } finally {
       setLoading(false);
     }
   };
 
-  const getMockOrders = () => {
-    if (activeTab === 'pending') {
-      return [
-        {
-          id: 1,
-          orderId: 'ORDER_12345',
-          clientFullName: "Michael Johnson",
-          date: "October 10, 2025",
-          carMake: "Toyota",
-          carModel: "Camry 2018",
-          status: 'pending',
-          hasQuote: false
-        }
-      ];
-    } else {
-      return [
-        {
-          id: 2,
-          orderId: 'ORDER_12346',
-          clientFullName: "Sarah Williams",
-          date: "October 11, 2025",
-          carMake: "Honda",
-          carModel: "Civic 2020",
-          status: 'quoted',
-          hasQuote: true,
-          quoteStatus: 'pending'
-        }
-      ];
-    }
-  };
+  // const getMockOrders = () => {
+  //   if (activeTab === 'pending') {
+  //     return [
+  //       {
+  //         id: 1,
+  //         orderId: 'ORDER_12345',
+  //         clientFullName: "Michael Johnson",
+  //         date: "October 10, 2025",
+  //         carMake: "Toyota",
+  //         carModel: "Camry 2018",
+  //         status: 'pending',
+  //         hasQuote: false
+  //       }
+  //     ];
+  //   } else {
+  //     return [
+  //       {
+  //         id: 2,
+  //         orderId: 'ORDER_12346',
+  //         clientFullName: "Sarah Williams",
+  //         date: "October 11, 2025",
+  //         carMake: "Honda",
+  //         carModel: "Civic 2020",
+  //         status: 'quoted',
+  //         hasQuote: true,
+  //         quoteStatus: 'pending'
+  //       }
+  //     ];
+  //   }
+  // };
 
   // 🔍 Filter orders dynamically as user types
   const filteredOrders = orders.filter((order) =>
@@ -490,15 +490,15 @@ const NewOrders = () => {
             ) : (
               <div className="no-orders-state">
                 <div className="no-orders-icon">
-                  {activeTab === 'pending' ? '🔧' : '💰'}
+                  {activeTab === 'pending' ? '' : ''}
                 </div>
                 <h3>
-                  {activeTab === 'pending' ? 'No Pending Orders' : 'No Quotes Sent'}
+                  {activeTab === 'pending' ? '' : ''}
                 </h3>
                 <p>
                   {activeTab === 'pending' 
-                    ? "You don't have any pending orders at the moment." 
-                    : "You haven't sent any quotes yet."}
+                    ? "" 
+                    : ""}
                 </p>
               </div>
             )}

@@ -55,7 +55,7 @@ const Sidebar = () => {
             {/* Dashboard */}
             <li>
               <NavLink
-                to="/"
+                to="/dashboard"
                 className={({ isActive }) =>
                   `menu-item ${isActive ? "active" : ""}`
                 }
@@ -84,7 +84,7 @@ const Sidebar = () => {
             <ul className={`submenu ${ordersOpen ? "open" : ""}`}>
               <li>
                 <NavLink
-                  to="/find-mechanic"
+                  to="/new-orders"
                   className={({ isActive }) => (isActive ? "active" : "")}
                   onClick={closeSidebar}
                 >
@@ -92,15 +92,15 @@ const Sidebar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/get-auto-parts"
+                {/* <NavLink
+                  to="/procure-page"
                   className={({ isActive }) => (isActive ? "active" : "")}
                   onClick={closeSidebar}
                 >
                   Ongoing Orders
-                </NavLink>
+                </NavLink> */}
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/charge-ev"
                   className={({ isActive }) => (isActive ? "active" : "")}
@@ -108,13 +108,13 @@ const Sidebar = () => {
                 >
                   Completed Orders
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
 
             {/* Others */}
             <li>
               <NavLink
-                to="/pending"
+                to="/procure-page"
                 className={({ isActive }) =>
                   `menu-item ${isActive ? "active" : ""}`
                 }
@@ -140,7 +140,7 @@ const Sidebar = () => {
 
             <li>
               <NavLink
-                to="/chats"
+                to="/chat"
                 className={({ isActive }) =>
                   `menu-item ${isActive ? "active" : ""}`
                 }
