@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { authAPI } from "../services/api";
-import "../styles/createAccount.css";
+import "../styles/CreateAccount.css";
 
 const CreateAccount = () => {
   const slides = [
